@@ -52,12 +52,6 @@ export default function Features() {
     },
   ]
 
-  const featuresJsx = featureItems.map(({ icon, title, subtitle }, index) => (
-    <div class='col-lg-4 col-md-6 d-flex' key={index}>
-      <FeatureItem icon={icon} title={title} subtitle={subtitle} />
-    </div>
-  ))
-
   return (
     <section class='features-section bg-light' id='features'>
       <div class='container'>
@@ -70,7 +64,13 @@ export default function Features() {
           </div>
         </div>
 
-        <div class='row'>{featuresJsx}</div>
+        <div class='row'>
+          {featureItems.map(({ icon, title, subtitle }, index) => (
+            <div class='col-lg-4 col-md-6 d-flex' key={index}>
+              <FeatureItem icon={icon} title={title} subtitle={subtitle} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

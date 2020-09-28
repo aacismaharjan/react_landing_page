@@ -1,6 +1,59 @@
 import React from 'react'
 
+const FaqItem = ({ ques, ans }) => {
+  return (
+    <div class='faq-item'>
+      <h4>{ques}</h4>
+      <p>{ans}</p>
+    </div>
+  )
+}
+
+export { FaqItem }
+
 export default function Faq() {
+  const faqItems = [
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      ques: 'How can I buy the watch?',
+      ans:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ]
   return (
     <section class='faq-section' id='faq'>
       <div class='container'>
@@ -14,65 +67,11 @@ export default function Faq() {
         </div>
 
         <div class='row'>
-          <div class='col-md-6'>
-            <div class='faq-item'>
-              <h4>How can I buy the watch?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+          {faqItems.map(({ ques, ans }, index) => (
+            <div class='col-md-6' key={index}>
+              <FaqItem ques={ques} ans={ans} />
             </div>
-          </div>
-
-          <div class='col-md-6'>
-            <div class='faq-item'>
-              <h4>How can I buy the watch?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-md-6'>
-            <div class='faq-item'>
-              <h4>How can I buy the watch?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-md-6'>
-            <div class='faq-item'>
-              <h4>How can I buy the watch?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-md-6'>
-            <div class='faq-item'>
-              <h4>How can I buy the watch?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-md-6'>
-            <div class='faq-item'>
-              <h4>How can I buy the watch?</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
+          ))}
 
           <div class='col-lg-12'>
             <p class='support-text text-center'>
