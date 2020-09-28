@@ -22,30 +22,6 @@ input {
   font-family: inherit;
 }
 
-.logo-circle {
-  height: 26px;
-  width: 26px;
-  border: 4px solid #ffffff;
-  display: inline-block;
-  margin-bottom: -2px;
-  border-radius: 50%;
-  position: relative;
-  margin-right: 8px;
-}
-
-.logo-circle::before {
-  content: '';
-  height: 8px;
-  width: 8px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -4px;
-  margin-right: -4px;
-}
-
 .mybtn1,
 .mybtn2 {
   font-size: 16px;
@@ -177,6 +153,19 @@ section {
 /* Header */
 .header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: saturate(180%) blur(20px);
+  background: transparent;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.8;
 }
 
 .header .navbar {

@@ -1,5 +1,5 @@
 .section-title .title::before,
-.header,
+.header::before,
 .home-section,
 .features-section .features-item:hover,
 .products-section .owl-carousel .owl-nav button.owl-next,
