@@ -4,6 +4,7 @@ import product2 from '../img/products/2.jpg'
 import product3 from '../img/products/3.jpg'
 import product4 from '../img/products/4.jpg'
 import product5 from '../img/products/5.jpg'
+import Button from './Button'
 import SectionTitle from './SectionTitle'
 
 const ProductItem = ({ product: { showcase, newPrice, oldPrice, desc } }) => {
@@ -12,9 +13,7 @@ const ProductItem = ({ product: { showcase, newPrice, oldPrice, desc } }) => {
       <div class='product-img'>
         <img src={showcase} alt='product' class='img-fluid' />
         <div class='overlay'>
-          <a href='#' class='btn mybtn1'>
-            Buy Now
-          </a>
+          <Button title='Buy Now' />
         </div>
       </div>
       <div class='product-content'>

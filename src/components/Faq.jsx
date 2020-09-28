@@ -70,7 +70,7 @@ export default function Faq() {
           <div class='col-lg-12'>
             <p class='support-text text-center'>
               Any Question?
-              <a href='#'>info@domain.com</a>
+              <a href='#home'>info@domain.com</a>
             </p>
           </div>
         </div>

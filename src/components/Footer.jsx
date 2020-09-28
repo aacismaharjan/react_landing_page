@@ -7,7 +7,7 @@ export default function Footer() {
         <div class='row justify-content-center'>
           <div class='col-lg-6'>
             <div class='footer-logo'>
-              <a href='#'>
+              <a href='#home'>
                 <span class='logo-circle'></span>
                 Shala
               </a>
@@ -21,19 +21,19 @@ export default function Footer() {
             </div>
 
             <div class='footer-social-links'>
-              <a href='#'>
+              <a href='#home'>
                 <i class='fab fa-facebook-f'></i>
               </a>
-              <a href='#'>
+              <a href='#home'>
                 <i class='fab fa-twitter'></i>
               </a>
-              <a href='#'>
+              <a href='#home'>
                 <i class='fab fa-instagram'></i>
               </a>
-              <a href='#'>
+              <a href='#home'>
                 <i class='fab fa-linkedin'></i>
               </a>
-              <a href='#'>
+              <a href='#home'>
                 <i class='fab fa-youtube'></i>
               </a>
             </div>

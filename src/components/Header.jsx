@@ -5,7 +5,7 @@ export default function Header() {
     <header class='header fixed-top'>
       <div class='container'>
         <nav class='navbar navbar-expand-lg navbar-light'>
-          <a class='navbar-brand' href='#'>
+          <a class='navbar-brand' href='#home'>
             <span class='logo-circle'></span>
             Shala
           </a>
