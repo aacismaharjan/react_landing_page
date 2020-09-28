@@ -5,7 +5,64 @@ import product3 from '../img/products/3.jpg'
 import product4 from '../img/products/4.jpg'
 import product5 from '../img/products/5.jpg'
 
+const ProductItem = ({ product: { showcase, newPrice, oldPrice, desc } }) => {
+  return (
+    <div class='products-item'>
+      <div class='product-img'>
+        <img src={showcase} alt='product' class='img-fluid' />
+        <div class='overlay'>
+          <a href='#' class='btn mybtn1'>
+            Buy Now
+          </a>
+        </div>
+      </div>
+      <div class='product-content'>
+        <div class='product-price'>
+          <span class='new-price'>${newPrice}</span>
+          <span class='old-price'>${oldPrice}</span>
+        </div>
+
+        <h5 class='product-name'>{desc}</h5>
+      </div>
+    </div>
+  )
+}
+
+export { ProductItem }
+
 export default function Products() {
+  const productItems = [
+    {
+      showcase: product1,
+      newPrice: 49,
+      oldPrice: 95,
+      desc: 'Simple product 001',
+    },
+    {
+      showcase: product2,
+      newPrice: 49,
+      oldPrice: 95,
+      desc: 'Simple product 002',
+    },
+    {
+      showcase: product3,
+      newPrice: 49,
+      oldPrice: 95,
+      desc: 'Simple product 003',
+    },
+    {
+      showcase: product4,
+      newPrice: 49,
+      oldPrice: 95,
+      desc: 'Simple product 004',
+    },
+    {
+      showcase: product5,
+      newPrice: 49,
+      oldPrice: 95,
+      desc: 'Simple product 005',
+    },
+  ]
   return (
     <section class='products-section' id='products'>
       <div class='container'>
@@ -22,110 +79,11 @@ export default function Products() {
 
         <div class='row'>
           <div class='owl-carousel' id='product-carousel'>
-            <div class='col-lg-12'>
-              <div class='products-item'>
-                <div class='product-img'>
-                  <img src={product1} alt='product' class='img-fluid' />
-                  <div class='overlay'>
-                    <a href='#' class='btn mybtn1'>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div class='product-content'>
-                  <div class='product-price'>
-                    <span class='new-price'>$49</span>
-                    <span class='old-price'>$95</span>
-                  </div>
-
-                  <h5 class='product-name'>Simple product 001</h5>
-                </div>
+            {productItems.map((product, index) => (
+              <div class='col-lg-12' key={index}>
+                <ProductItem product={product} />
               </div>
-            </div>
-
-            <div class='col-lg-12'>
-              <div class='products-item'>
-                <div class='product-img'>
-                  <img src={product2} alt='product' class='img-fluid' />
-                  <div class='overlay'>
-                    <a href='#' class='btn mybtn1'>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div class='product-content'>
-                  <div class='product-price'>
-                    <span class='new-price'>$49</span>
-                    <span class='old-price'>$95</span>
-                  </div>
-
-                  <h5 class='product-name'>Simple product 002</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class='col-lg-12'>
-              <div class='products-item'>
-                <div class='product-img'>
-                  <img src={product3} alt='product' class='img-fluid' />
-                  <div class='overlay'>
-                    <a href='#' class='btn mybtn1'>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div class='product-content'>
-                  <div class='product-price'>
-                    <span class='new-price'>$49</span>
-                    <span class='old-price'>$95</span>
-                  </div>
-
-                  <h5 class='product-name'>Simple product 003</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class='col-lg-12'>
-              <div class='products-item'>
-                <div class='product-img'>
-                  <img src={product4} alt='product' class='img-fluid' />
-                  <div class='overlay'>
-                    <a href='#' class='btn mybtn1'>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div class='product-content'>
-                  <div class='product-price'>
-                    <span class='new-price'>$49</span>
-                    <span class='old-price'>$95</span>
-                  </div>
-
-                  <h5 class='product-name'>Simple product 004</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class='col-lg-12'>
-              <div class='products-item'>
-                <div class='product-img'>
-                  <img src={product5} alt='product' class='img-fluid' />
-                  <div class='overlay'>
-                    <a href='#' class='btn mybtn1'>
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div class='product-content'>
-                  <div class='product-price'>
-                    <span class='new-price'>$49</span>
-                    <span class='old-price'>$95</span>
-                  </div>
-
-                  <h5 class='product-name'>Simple product 005</h5>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
