@@ -3,9 +3,9 @@ import SectionTitle from './SectionTitle'
 
 const FeatureItem = ({ icon, title, subtitle }) => {
   return (
-    <div class='features-item col-lg-12'>
-      <div class='icon'>
-        <i class={icon}></i>
+    <div className='features-item col-lg-12'>
+      <div className='icon'>
+        <i className={icon}></i>
       </div>
       <h3>{title}</h3>
       <p>{subtitle}</p>
@@ -54,13 +54,13 @@ export default function Features() {
   ]
 
   return (
-    <section class='features-section bg-light' id='features'>
-      <div class='container'>
+    <section className='features-section bg-light' id='features'>
+      <div className='container'>
         <SectionTitle title='Features' subtitle='Lorem ipsum dolor sit amet' />
 
-        <div class='row'>
+        <div className='row'>
           {featureItems.map(({ icon, title, subtitle }, index) => (
-            <div class='col-lg-4 col-md-6 d-flex' key={index}>
+            <div className='col-lg-4 col-md-6 d-flex' key={index}>
               <FeatureItem icon={icon} title={title} subtitle={subtitle} />
             </div>
           ))}

@@ -1,21 +1,23 @@
 import React, { Component } from 'react'
-import About from './components/About'
-import Contact from './components/Contact'
-import Faq from './components/Faq'
-import Features from './components/Features'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Home from './components/Home'
-import Newsletter from './components/Newsletter'
-import Preloader from './components/Preloader'
-import Products from './components/Products'
-import StyleSwitcher from './components/StyleSwitcher'
-import Testinomial from './components/Testinomial'
+import {
+  About,
+  Contact,
+  Faq,
+  Features,
+  Footer,
+  Header,
+  Home,
+  Newsletter,
+  Preloader,
+  Products,
+  StyleSwitcher,
+  Testinomial,
+} from './components/'
 
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Preloader />
         <Header />
         <Home />
@@ -28,7 +30,7 @@ export default class App extends Component {
         <Contact />
         <Footer />
         <StyleSwitcher />
-      </div>
+      </React.Fragment>
     )
   }
 }

@@ -10,11 +10,11 @@ export default function SectionTitle({ title, subtitle, isLeft }) {
     return isLeft ? 'col-lg-12' : 'col-lg-7'
   }
   return (
-    <div class={getRowClasses()}>
-      <div class={getColClasses()}>
-        <div class='section-title'>
-          <h1 class='title'>{title}</h1>
-          <h2 class='subtitle'>{subtitle}</h2>
+    <div className={getRowClasses()}>
+      <div className={getColClasses()}>
+        <div className='section-title'>
+          <h1 className='title'>{title}</h1>
+          <h2 className='subtitle'>{subtitle}</h2>
         </div>
       </div>
     </div>

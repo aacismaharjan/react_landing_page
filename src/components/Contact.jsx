@@ -4,9 +4,9 @@ import Section from './Section'
 
 const ContactItem = ({ item: { icon, title, subtitle } }) => {
   return (
-    <div class='contact-item'>
-      <div class='icon'>
-        <i class={icon}></i>
+    <div className='contact-item'>
+      <div className='icon'>
+        <i className={icon}></i>
       </div>
       <h5>{title}</h5>
       <p>{subtitle}</p>
@@ -40,50 +40,53 @@ export default function Contact() {
       className='contact-section'
       id='contact'
     >
-      <div class='row'>
-        <div class='col-md-7'>
-          <form class='contact-form'>
-            <div class='row'>
-              <div class='col-md-6'>
-                <div class='form-group'>
+      <div className='row'>
+        <div className='col-md-7'>
+          <form className='contact-form'>
+            <div className='row'>
+              <div className='col-md-6'>
+                <div className='form-group'>
                   <input
                     type='text'
-                    class='form-control'
+                    className='form-control'
                     placeholder='Your Name'
                   />
                 </div>
               </div>
 
-              <div class='col-md-6'>
-                <div class='form-group'>
+              <div className='col-md-6'>
+                <div className='form-group'>
                   <input
                     type='text'
-                    class='form-control'
+                    className='form-control'
                     placeholder='Your Email'
                   />
                 </div>
               </div>
             </div>
 
-            <div class='form-group'>
+            <div className='form-group'>
               <input
                 type='text'
-                class='form-control'
+                className='form-control'
                 placeholder='Your Subject'
               />
             </div>
 
-            <div class='form-group'>
-              <textarea class='form-control' placeholder='Message'></textarea>
+            <div className='form-group'>
+              <textarea
+                className='form-control'
+                placeholder='Message'
+              ></textarea>
             </div>
 
-            <div class='form-group'>
+            <div className='form-group'>
               <Button type='mybtn2' title='Send Message'></Button>
             </div>
           </form>
         </div>
 
-        <div class='col-md-5 order-first order-md-last'>
+        <div className='col-md-5 order-first order-md-last'>
           {contactItems.map((item, index) => (
             <ContactItem item={item} key={index} />
           ))}

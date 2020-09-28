@@ -18,12 +18,12 @@ export default function StyleSwitcher() {
   }
 
   return (
-    <div class='style-switcher'>
-      <div class='toggle-style-switcher' onClick={toggleSwitcher}>
-        <i class='fas fa-cog fa-spin'></i>
+    <div className='style-switcher'>
+      <div className='toggle-style-switcher' onClick={toggleSwitcher}>
+        <i className='fas fa-cog fa-spin'></i>
       </div>
       <h5>Style Switcher</h5>
-      <ul class='list-unstyled'>
+      <ul className='list-unstyled'>
         <li
           title='crimson'
           style={{ backgroundColor: '#d70d25' }}

@@ -10,13 +10,13 @@ export default function Newsletter() {
       className='newsletter-section'
       id='products'
     >
-      <div class='row justify-content-center'>
-        <div class='col-md-10 col-lg-7'>
-          <form class='newsletter-form'>
-            <div class='form-group'>
+      <div className='row justify-content-center'>
+        <div className='col-md-10 col-lg-7'>
+          <form className='newsletter-form'>
+            <div className='form-group'>
               <input
                 type='text'
-                class='form-control'
+                className='form-control'
                 placeholder='Enter Your Mail'
               />
 

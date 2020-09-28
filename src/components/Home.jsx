@@ -4,18 +4,18 @@ import Button from './Button'
 
 export default function Home() {
   return (
-    <section class='home-section' id='home'>
-      <div class='bg-shapes'>
+    <section className='home-section' id='home'>
+      <div className='bg-shapes'>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
       </div>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-lg-6'>
-            <div class='home-content'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-6'>
+            <div className='home-content'>
               <h1>Present your awesome product</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,8 +26,8 @@ export default function Home() {
               <Button title='Buy for $150'></Button>
             </div>
           </div>
-          <div class='col-lg-6 order-first order-lg-last'>
-            <div class='home-img'>
+          <div className='col-lg-6 order-first order-lg-last'>
+            <div className='home-img'>
               <img src={showCaseImg} alt='product' />
             </div>
           </div>

@@ -3,7 +3,7 @@ import Section from './Section'
 
 const FaqItem = ({ ques, ans }) => {
   return (
-    <div class='faq-item'>
+    <div className='faq-item'>
       <h4>{ques}</h4>
       <p>{ans}</p>
     </div>
@@ -62,15 +62,15 @@ export default function Faq() {
       className='faq-section'
       id='faq'
     >
-      <div class='row'>
+      <div className='row'>
         {faqItems.map(({ ques, ans }, index) => (
-          <div class='col-md-6' key={index}>
+          <div className='col-md-6' key={index}>
             <FaqItem ques={ques} ans={ans} />
           </div>
         ))}
 
-        <div class='col-lg-12'>
-          <p class='support-text text-center'>
+        <div className='col-lg-12'>
+          <p className='support-text text-center'>
             Any Question?
             <a href='#home'>info@domain.com</a>
           </p>

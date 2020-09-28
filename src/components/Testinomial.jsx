@@ -6,34 +6,34 @@ import Section from './Section'
 
 const TestinomialItem = ({ testi: { comment, avatar, name, post } }) => {
   return (
-    <div class='testi-item'>
-      <div class='testi-comment'>
+    <div className='testi-item'>
+      <div className='testi-comment'>
         <p>
-          <i class='fas fa-quote-left'></i>
+          <i className='fas fa-quote-left'></i>
           {comment}
-          <i class='fas fa-quote-right'></i>
+          <i className='fas fa-quote-right'></i>
         </p>
 
-        <ul class='stars list-unstyled'>
+        <ul className='stars list-unstyled'>
           <li>
-            <i class='fas fa-star'></i>
+            <i className='fas fa-star'></i>
           </li>
           <li>
-            <i class='fas fa-star'></i>
+            <i className='fas fa-star'></i>
           </li>
           <li>
-            <i class='fas fa-star'></i>
+            <i className='fas fa-star'></i>
           </li>
           <li>
-            <i class='fas fa-star-half-alt'></i>
+            <i className='fas fa-star-half-alt'></i>
           </li>
           <li>
-            <i class='far fa-star'></i>
+            <i className='far fa-star'></i>
           </li>
         </ul>
       </div>
 
-      <div class='client-info'>
+      <div className='client-info'>
         <img src={avatar} alt='testinomial' />
         <h5>{name}</h5>
         <p>{post}</p>
@@ -75,10 +75,10 @@ export default function Testinomial() {
       className='testinomial-section'
       id='testinomial'
     >
-      <div class='row'>
-        <div class='owl-carousel' id='testinomial-carousel'>
+      <div className='row'>
+        <div className='owl-carousel' id='testinomial-carousel'>
           {testiItems.map((testi, index) => (
-            <div class='col-lg-12' key={index}>
+            <div className='col-lg-12' key={index}>
               <TestinomialItem testi={testi} />
             </div>
           ))}

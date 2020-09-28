@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Preloader() {
   return (
-    <div>
-      <div class='preloader'>
-        <div class='loader'></div>
+    <React.Fragment>
+      <div className='preloader'>
+        <div className='loader'></div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }

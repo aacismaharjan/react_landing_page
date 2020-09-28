@@ -9,20 +9,20 @@ import Section from './Section'
 
 const ProductItem = ({ product: { showcase, newPrice, oldPrice, desc } }) => {
   return (
-    <div class='products-item'>
-      <div class='product-img'>
-        <img src={showcase} alt='product' class='img-fluid' />
-        <div class='overlay'>
+    <div className='products-item'>
+      <div className='product-img'>
+        <img src={showcase} alt='product' className='img-fluid' />
+        <div className='overlay'>
           <Button title='Buy Now' />
         </div>
       </div>
-      <div class='product-content'>
-        <div class='product-price'>
-          <span class='new-price'>${newPrice}</span>
-          <span class='old-price'>${oldPrice}</span>
+      <div className='product-content'>
+        <div className='product-price'>
+          <span className='new-price'>${newPrice}</span>
+          <span className='old-price'>${oldPrice}</span>
         </div>
 
-        <h5 class='product-name'>{desc}</h5>
+        <h5 className='product-name'>{desc}</h5>
       </div>
     </div>
   )
@@ -70,10 +70,10 @@ export default function Products() {
       className='products-section'
       id='products'
     >
-      <div class='row'>
-        <div class='owl-carousel' id='product-carousel'>
+      <div className='row'>
+        <div className='owl-carousel' id='product-carousel'>
           {productItems.map((product, index) => (
-            <div class='col-lg-12' key={index}>
+            <div className='col-lg-12' key={index}>
               <ProductItem product={product} />
             </div>
           ))}

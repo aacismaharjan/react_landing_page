@@ -1,48 +1,70 @@
 import React from 'react'
 
-export default function Footer() {
+const SocialIconLinks = ({ href, name }) => {
   return (
-    <footer class='footer'>
-      <div class='container'>
-        <div class='row justify-content-center'>
-          <div class='col-lg-6'>
-            <div class='footer-logo'>
+    <a href={href}>
+      <i className={'fab fa-' + name}></i>
+    </a>
+  )
+}
+
+export default function Footer() {
+  const socialLinks = [
+    {
+      href: '#home',
+      name: 'facebook-f',
+    },
+    {
+      href: '#home',
+      name: 'twitter',
+    },
+    {
+      href: '#home',
+      name: 'instagram',
+    },
+    {
+      href: '#home',
+      name: 'linkedin',
+    },
+    {
+      href: '#home',
+      name: 'youtube',
+    },
+  ]
+  return (
+    <footer className='footer'>
+      <div className='container'>
+        <div className='row justify-content-center'>
+          <div className='col-lg-6'>
+            <div className='footer-logo'>
               <a href='#home'>
-                <span class='logo-circle'></span>
+                <span className='logo-circle'></span>
                 Shala
               </a>
             </div>
 
-            <div class='footer-text'>
+            <div className='footer-text'>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor
               </p>
             </div>
 
-            <div class='footer-social-links'>
-              <a href='#home'>
-                <i class='fab fa-facebook-f'></i>
-              </a>
-              <a href='#home'>
-                <i class='fab fa-twitter'></i>
-              </a>
-              <a href='#home'>
-                <i class='fab fa-instagram'></i>
-              </a>
-              <a href='#home'>
-                <i class='fab fa-linkedin'></i>
-              </a>
-              <a href='#home'>
-                <i class='fab fa-youtube'></i>
-              </a>
+            <div className='footer-social-links'>
+              {socialLinks.map((link, index) => (
+                <SocialIconLinks
+                  href={link.href}
+                  name={link.name}
+                  key={index}
+                />
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      <div class='copyright'>
-        <p>Copyright &copy; The WebShala, 2020</p>
+      <div className='copyright'>
+        <p>Copyright &copy; The WebShala, 2020. Reactify by Aashish</p>
       </div>
     </footer>
   )
