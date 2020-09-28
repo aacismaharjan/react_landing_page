@@ -1,6 +1,63 @@
 import React from 'react'
 
+const FeatureItem = ({ icon, title, subtitle }) => {
+  return (
+    <div class='features-item col-lg-12'>
+      <div class='icon'>
+        <i class={icon}></i>
+      </div>
+      <h3>{title}</h3>
+      <p>{subtitle}</p>
+    </div>
+  )
+}
+
 export default function Features() {
+  const featureItems = [
+    {
+      icon: 'fas fa-bell',
+      title: 'Notification Alert',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    },
+    {
+      icon: 'fas fa-wifi',
+      title: 'Support Wifi',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    },
+    {
+      icon: 'fas fa-map-marker-alt',
+      title: 'GPS Tracking',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    },
+    {
+      icon: 'fas fa-comments',
+      title: 'Live Chat',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    },
+    {
+      icon: 'fas fa-camera',
+      title: 'Camera',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    },
+    {
+      icon: 'fab fa-bluetooth',
+      title: 'Bluetooth',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    },
+  ]
+
+  const featuresJsx = featureItems.map(({ icon, title, subtitle }, index) => (
+    <div class='col-lg-4 col-md-6 d-flex' key={index}>
+      <FeatureItem icon={icon} title={title} subtitle={subtitle} />
+    </div>
+  ))
+
   return (
     <section class='features-section bg-light' id='features'>
       <div class='container'>
@@ -13,86 +70,10 @@ export default function Features() {
           </div>
         </div>
 
-        <div class='row'>
-          <div class='col-lg-4 col-md-6 d-flex'>
-            <div class='features-item col-lg-12'>
-              <div class='icon'>
-                <i class='fas fa-bell'></i>
-              </div>
-              <h3>Notification Alert</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-lg-4 col-md-6 d-flex'>
-            <div class='features-item col-lg-12'>
-              <div class='icon'>
-                <i class='fab fa-bluetooth'></i>
-              </div>
-              <h3>Bluetooth</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-lg-4 col-md-6 d-flex'>
-            <div class='features-item col-lg-12'>
-              <div class='icon'>
-                <i class='fas fa-wifi'></i>
-              </div>
-              <h3>Support Wifi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-lg-4 col-md-6 d-flex'>
-            <div class='features-item col-lg-12'>
-              <div class='icon'>
-                <i class='fas fa-map-marker-alt'></i>
-              </div>
-              <h3>GPS Tracking</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-lg-4 col-md-6 d-flex'>
-            <div class='features-item col-lg-12'>
-              <div class='icon'>
-                <i class='fas fa-comments'></i>
-              </div>
-              <h3>Live Chat</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
-              </p>
-            </div>
-          </div>
-
-          <div class='col-lg-4 col-md-6 d-flex'>
-            <div class='features-item col-lg-12'>
-              <div class='icon'>
-                <i class='fas fa-camera'></i>
-              </div>
-              <h3>Camera</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class='row'>{featuresJsx}</div>
       </div>
     </section>
   )
 }
+
+export { FeatureItem }
