@@ -5,7 +5,7 @@ import product3 from '../img/products/3.jpg'
 import product4 from '../img/products/4.jpg'
 import product5 from '../img/products/5.jpg'
 import Button from './Button'
-import SectionTitle from './SectionTitle'
+import Section from './Section'
 
 const ProductItem = ({ product: { showcase, newPrice, oldPrice, desc } }) => {
   return (
@@ -64,23 +64,21 @@ export default function Products() {
     },
   ]
   return (
-    <section class='products-section' id='products'>
-      <div class='container'>
-        <SectionTitle
-          title='Our Products'
-          subtitle='We have lots of excellent and high quality products'
-        />
-
-        <div class='row'>
-          <div class='owl-carousel' id='product-carousel'>
-            {productItems.map((product, index) => (
-              <div class='col-lg-12' key={index}>
-                <ProductItem product={product} />
-              </div>
-            ))}
-          </div>
+    <Section
+      title='Our Products'
+      subtitle='We have lots of excellent and high quality products'
+      className='products-section'
+      id='products'
+    >
+      <div class='row'>
+        <div class='owl-carousel' id='product-carousel'>
+          {productItems.map((product, index) => (
+            <div class='col-lg-12' key={index}>
+              <ProductItem product={product} />
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }

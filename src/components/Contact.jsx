@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-import SectionTitle from './SectionTitle'
+import Section from './Section'
 
 const ContactItem = ({ item: { icon, title, subtitle } }) => {
   return (
@@ -34,63 +34,61 @@ export default function Contact() {
   ]
 
   return (
-    <section class='contact-section' id='contact'>
-      <div class='container'>
-        <SectionTitle
-          title='Contact us'
-          subtitle='Lorem ipsum dolor sit amet'
-        />
-
-        <div class='row'>
-          <div class='col-md-7'>
-            <form class='contact-form'>
-              <div class='row'>
-                <div class='col-md-6'>
-                  <div class='form-group'>
-                    <input
-                      type='text'
-                      class='form-control'
-                      placeholder='Your Name'
-                    />
-                  </div>
-                </div>
-
-                <div class='col-md-6'>
-                  <div class='form-group'>
-                    <input
-                      type='text'
-                      class='form-control'
-                      placeholder='Your Email'
-                    />
-                  </div>
+    <Section
+      title='Contact us'
+      subtitle='Lorem ipsum dolor sit amet'
+      className='contact-section'
+      id='contact'
+    >
+      <div class='row'>
+        <div class='col-md-7'>
+          <form class='contact-form'>
+            <div class='row'>
+              <div class='col-md-6'>
+                <div class='form-group'>
+                  <input
+                    type='text'
+                    class='form-control'
+                    placeholder='Your Name'
+                  />
                 </div>
               </div>
 
-              <div class='form-group'>
-                <input
-                  type='text'
-                  class='form-control'
-                  placeholder='Your Subject'
-                />
+              <div class='col-md-6'>
+                <div class='form-group'>
+                  <input
+                    type='text'
+                    class='form-control'
+                    placeholder='Your Email'
+                  />
+                </div>
               </div>
+            </div>
 
-              <div class='form-group'>
-                <textarea class='form-control' placeholder='Message'></textarea>
-              </div>
+            <div class='form-group'>
+              <input
+                type='text'
+                class='form-control'
+                placeholder='Your Subject'
+              />
+            </div>
 
-              <div class='form-group'>
-                <Button type='mybtn2' title='Send Message'></Button>
-              </div>
-            </form>
-          </div>
+            <div class='form-group'>
+              <textarea class='form-control' placeholder='Message'></textarea>
+            </div>
 
-          <div class='col-md-5 order-first order-md-last'>
-            {contactItems.map((item, index) => (
-              <ContactItem item={item} key={index} />
-            ))}
-          </div>
+            <div class='form-group'>
+              <Button type='mybtn2' title='Send Message'></Button>
+            </div>
+          </form>
+        </div>
+
+        <div class='col-md-5 order-first order-md-last'>
+          {contactItems.map((item, index) => (
+            <ContactItem item={item} key={index} />
+          ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }

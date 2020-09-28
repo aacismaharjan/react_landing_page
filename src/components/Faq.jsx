@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionTitle from './SectionTitle'
+import Section from './Section'
 
 const FaqItem = ({ ques, ans }) => {
   return (
@@ -56,25 +56,26 @@ export default function Faq() {
     },
   ]
   return (
-    <section class='faq-section' id='faq'>
-      <div class='container'>
-        <SectionTitle title='Faq' subtitle='Frequently Asked Questions' />
-
-        <div class='row'>
-          {faqItems.map(({ ques, ans }, index) => (
-            <div class='col-md-6' key={index}>
-              <FaqItem ques={ques} ans={ans} />
-            </div>
-          ))}
-
-          <div class='col-lg-12'>
-            <p class='support-text text-center'>
-              Any Question?
-              <a href='#home'>info@domain.com</a>
-            </p>
+    <Section
+      title='Faq'
+      subtitle='Frequently Asked Question'
+      className='faq-section'
+      id='faq'
+    >
+      <div class='row'>
+        {faqItems.map(({ ques, ans }, index) => (
+          <div class='col-md-6' key={index}>
+            <FaqItem ques={ques} ans={ans} />
           </div>
+        ))}
+
+        <div class='col-lg-12'>
+          <p class='support-text text-center'>
+            Any Question?
+            <a href='#home'>info@domain.com</a>
+          </p>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }

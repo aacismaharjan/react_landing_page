@@ -2,7 +2,7 @@ import React from 'react'
 import Testi1 from '../img/testimonial/1.jpg'
 import Testi2 from '../img/testimonial/2.jpg'
 import Testi3 from '../img/testimonial/3.jpg'
-import SectionTitle from './SectionTitle'
+import Section from './Section'
 
 const TestinomialItem = ({ testi: { comment, avatar, name, post } }) => {
   return (
@@ -69,23 +69,21 @@ export default function Testinomial() {
     },
   ]
   return (
-    <section class='testinomial-section' id='testinomial'>
-      <div class='container'>
-        <SectionTitle
-          title='Testimonial'
-          subtitle='Our Satisfied Customer Feedback'
-        />
-
-        <div class='row'>
-          <div class='owl-carousel' id='testinomial-carousel'>
-            {testiItems.map((testi, index) => (
-              <div class='col-lg-12' key={index}>
-                <TestinomialItem testi={testi} />
-              </div>
-            ))}
-          </div>
+    <Section
+      title='Testimonial'
+      subtitle='Our Satisfied Customer Feedback'
+      className='testinomial-section'
+      id='testinomial'
+    >
+      <div class='row'>
+        <div class='owl-carousel' id='testinomial-carousel'>
+          {testiItems.map((testi, index) => (
+            <div class='col-lg-12' key={index}>
+              <TestinomialItem testi={testi} />
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
