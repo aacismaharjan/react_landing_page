@@ -4,6 +4,7 @@ import product2 from '../img/products/2.jpg'
 import product3 from '../img/products/3.jpg'
 import product4 from '../img/products/4.jpg'
 import product5 from '../img/products/5.jpg'
+import SectionTitle from './SectionTitle'
 
 const ProductItem = ({ product: { showcase, newPrice, oldPrice, desc } }) => {
   return (
@@ -66,16 +67,10 @@ export default function Products() {
   return (
     <section class='products-section' id='products'>
       <div class='container'>
-        <div class='row justify-content-center'>
-          <div class='col-lg-7'>
-            <div class='section-title'>
-              <h1 class='title'>Our Products</h1>
-              <h2 class='subtitle'>
-                We have lots of excellent and high quality products
-              </h2>
-            </div>
-          </div>
-        </div>
+        <SectionTitle
+          title='Our Products'
+          subtitle='We have lots of excellent and high quality products'
+        />
 
         <div class='row'>
           <div class='owl-carousel' id='product-carousel'>

@@ -1,18 +1,15 @@
 import React from 'react'
 import Button from './Button'
+import SectionTitle from './SectionTitle'
 
 export default function Contact() {
   return (
     <section class='contact-section' id='contact'>
       <div class='container'>
-        <div class='row justify-content-center'>
-          <div class='col-lg-7'>
-            <div class='section-title'>
-              <h1 class='title'>Contact us</h1>
-              <h2 class='subtitle'>Lorem ipsum dolor sit amet</h2>
-            </div>
-          </div>
-        </div>
+        <SectionTitle
+          title='Contact us'
+          subtitle='Lorem ipsum dolor sit amet'
+        />
 
         <div class='row'>
           <div class='col-md-7'>

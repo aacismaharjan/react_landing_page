@@ -1,5 +1,6 @@
 import React from 'react'
 import aboutImg from '../img/watch-02.jpg'
+import SectionTitle from './SectionTitle'
 
 export default function About() {
   return (
@@ -13,12 +14,11 @@ export default function About() {
           </div>
 
           <div class='col-lg-6 order-first order-lg-last'>
-            <div class='section-title'>
-              <h1 class='title'>About Product</h1>
-              <h2 class='subtitle'>
-                Awesome digital watch can make your life easier
-              </h2>
-            </div>
+            <SectionTitle
+              title='About Product'
+              subtitle='Awesome digital watch can make your life easier'
+              isLeft
+            />
 
             <div class='about-content'>
               <p>

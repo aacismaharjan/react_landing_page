@@ -2,6 +2,7 @@ import React from 'react'
 import Testi1 from '../img/testimonial/1.jpg'
 import Testi2 from '../img/testimonial/2.jpg'
 import Testi3 from '../img/testimonial/3.jpg'
+import SectionTitle from './SectionTitle'
 
 const TestinomialItem = ({ testi: { comment, avatar, name, post } }) => {
   return (
@@ -70,14 +71,10 @@ export default function Testinomial() {
   return (
     <section class='testinomial-section' id='testinomial'>
       <div class='container'>
-        <div class='row justify-content-center'>
-          <div class='col-lg-7'>
-            <div class='section-title'>
-              <h1 class='title'>Testimonial</h1>
-              <h2 class='subtitle'>Our Satisfied Customer Feedback</h2>
-            </div>
-          </div>
-        </div>
+        <SectionTitle
+          title='Testimonial'
+          subtitle='Our Satisfied Customer Feedback'
+        />
 
         <div class='row'>
           <div class='owl-carousel' id='testinomial-carousel'>

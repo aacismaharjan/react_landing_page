@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionTitle from './SectionTitle'
 
 const FaqItem = ({ ques, ans }) => {
   return (
@@ -57,14 +58,7 @@ export default function Faq() {
   return (
     <section class='faq-section' id='faq'>
       <div class='container'>
-        <div class='row justify-content-center'>
-          <div class='col-lg-7'>
-            <div class='section-title'>
-              <h1 class='title'>Faq</h1>
-              <h2 class='subtitle'>Frequently Asked Questions</h2>
-            </div>
-          </div>
-        </div>
+        <SectionTitle title='Faq' subtitle='Frequently Asked Questions' />
 
         <div class='row'>
           {faqItems.map(({ ques, ans }, index) => (

@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionTitle from './SectionTitle'
 
 const FeatureItem = ({ icon, title, subtitle }) => {
   return (
@@ -55,14 +56,7 @@ export default function Features() {
   return (
     <section class='features-section bg-light' id='features'>
       <div class='container'>
-        <div class='row justify-content-center'>
-          <div class='col-lg-7'>
-            <div class='section-title'>
-              <h1 class='title'>Features</h1>
-              <h2 class='subtitle'>Lorem ipsum dolor sit amet</h2>
-            </div>
-          </div>
-        </div>
+        <SectionTitle title='Features' subtitle='Lorem ipsum dolor sit amet' />
 
         <div class='row'>
           {featureItems.map(({ icon, title, subtitle }, index) => (
