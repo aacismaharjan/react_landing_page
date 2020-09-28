@@ -1,6 +1,7 @@
 import React from 'react'
 import { navItemsData } from '../Database'
 import Logo from './Logo'
+import { toggleSwitcher } from './StyleSwitcher'
 
 const NavItemLink = ({ item: { href, text, isActive } }) => {
   return (
@@ -35,6 +36,11 @@ export default function Header() {
               {navItemsLink.map((item, index) => {
                 return <NavItemLink item={item} key={index} />
               })}
+              <li className='nav-item' onClick={toggleSwitcher}>
+                <a className='nav-link' href='#settings'>
+                  <i className='fas fa-cog'></i>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
