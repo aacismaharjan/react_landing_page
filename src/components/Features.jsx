@@ -1,4 +1,5 @@
 import React from 'react'
+import { featuresData } from '../Database'
 import SectionTitle from './SectionTitle'
 
 const FeatureItem = ({ icon, title, subtitle }) => {
@@ -14,44 +15,7 @@ const FeatureItem = ({ icon, title, subtitle }) => {
 }
 
 export default function Features() {
-  const featureItems = [
-    {
-      icon: 'fas fa-bell',
-      title: 'Notification Alert',
-      subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    },
-    {
-      icon: 'fas fa-wifi',
-      title: 'Support Wifi',
-      subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    },
-    {
-      icon: 'fas fa-map-marker-alt',
-      title: 'GPS Tracking',
-      subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    },
-    {
-      icon: 'fas fa-comments',
-      title: 'Live Chat',
-      subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    },
-    {
-      icon: 'fas fa-camera',
-      title: 'Camera',
-      subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    },
-    {
-      icon: 'fab fa-bluetooth',
-      title: 'Bluetooth',
-      subtitle:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    },
-  ]
+  const featureItems = featuresData
 
   return (
     <section className='features-section bg-light' id='features'>

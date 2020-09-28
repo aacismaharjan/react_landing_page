@@ -1,8 +1,6 @@
 import React from 'react'
-import Testi1 from '../img/testimonial/1.jpg'
-import Testi2 from '../img/testimonial/2.jpg'
-import Testi3 from '../img/testimonial/3.jpg'
 import Section from './Section'
+import { testiData } from '../Database'
 
 const TestinomialItem = ({ testi: { comment, avatar, name, post } }) => {
   return (
@@ -45,29 +43,7 @@ const TestinomialItem = ({ testi: { comment, avatar, name, post } }) => {
 export { TestinomialItem }
 
 export default function Testinomial() {
-  const testiItems = [
-    {
-      comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      avatar: Testi1,
-      name: 'Soshiv Upreti',
-      post: 'CEO Webshala',
-    },
-    {
-      comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      avatar: Testi2,
-      name: 'Pine Apple',
-      post: 'CEO Webshala',
-    },
-    {
-      comment:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      avatar: Testi3,
-      name: 'Rakesh Singh',
-      post: 'CEO Webshala',
-    },
-  ]
+  const testiItems = testiData
   return (
     <Section
       title='Testimonial'

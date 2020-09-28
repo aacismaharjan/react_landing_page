@@ -1,5 +1,6 @@
 import React from 'react'
 import Section from './Section'
+import { faqData } from '../Database'
 
 const FaqItem = ({ ques, ans }) => {
   return (
@@ -13,48 +14,7 @@ const FaqItem = ({ ques, ans }) => {
 export { FaqItem }
 
 export default function Faq() {
-  const faqItems = [
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      ques: 'How can I buy the watch?',
-      ans:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-  ]
+  const faqItems = faqData
   return (
     <Section
       title='Faq'

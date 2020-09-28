@@ -1,46 +1,24 @@
 import React from 'react'
+import { socialLinksData } from '../Database'
+import Logo from './Logo'
 
 const SocialIconLinks = ({ href, name }) => {
   return (
-    <a href={href}>
+    <a href={href} className='mx-1'>
       <i className={'fab fa-' + name}></i>
     </a>
   )
 }
 
 export default function Footer() {
-  const socialLinks = [
-    {
-      href: '#home',
-      name: 'facebook-f',
-    },
-    {
-      href: '#home',
-      name: 'twitter',
-    },
-    {
-      href: '#home',
-      name: 'instagram',
-    },
-    {
-      href: '#home',
-      name: 'linkedin',
-    },
-    {
-      href: '#home',
-      name: 'youtube',
-    },
-  ]
+  const socialLinks = socialLinksData
   return (
     <footer className='footer'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-lg-6'>
             <div className='footer-logo'>
-              <a href='#home'>
-                <span className='logo-circle'></span>
-                Shala
-              </a>
+              <Logo />
             </div>
 
             <div className='footer-text'>
@@ -64,7 +42,7 @@ export default function Footer() {
       </div>
 
       <div className='copyright'>
-        <p>Copyright &copy; The WebShala, 2020. Reactify by Aashish</p>
+        <p>&copy; Reactify by Aashish Maharjan, 2020</p>
       </div>
     </footer>
   )

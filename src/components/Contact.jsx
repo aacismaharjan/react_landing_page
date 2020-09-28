@@ -1,4 +1,5 @@
 import React from 'react'
+import { contactItemsData } from '../Database'
 import Button from './Button'
 import Section from './Section'
 
@@ -15,23 +16,7 @@ const ContactItem = ({ item: { icon, title, subtitle } }) => {
 }
 
 export default function Contact() {
-  const contactItems = [
-    {
-      icon: 'fas fa-map-marker-alt',
-      title: 'Location',
-      subtitle: 'B261 aqua Park, New Delhi,122222',
-    },
-    {
-      icon: 'fas fa-envelope',
-      title: 'Email',
-      subtitle: 'info@yourdomain.com',
-    },
-    {
-      icon: 'fas fa-phone-alt',
-      title: 'Call on us',
-      subtitle: '9100-000-000',
-    },
-  ]
+  const contactItems = contactItemsData
 
   return (
     <Section

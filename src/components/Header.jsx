@@ -1,4 +1,6 @@
 import React from 'react'
+import { navItemsData } from '../Database'
+import Logo from './Logo'
 
 const NavItemLink = ({ item: { href, text, isActive } }) => {
   return (
@@ -11,52 +13,13 @@ const NavItemLink = ({ item: { href, text, isActive } }) => {
 }
 
 export default function Header() {
-  const navItemsLink = [
-    {
-      href: '#home',
-      text: 'Home',
-      isActive: true,
-    },
-    {
-      href: '#about',
-      text: 'About',
-      isActive: false,
-    },
-    {
-      href: '#features',
-      text: 'Features',
-      isActive: false,
-    },
-    {
-      href: '#products',
-      text: 'Products',
-      isActive: false,
-    },
-    {
-      href: '#testinomial',
-      text: 'Testinomial',
-      isActive: false,
-    },
-    {
-      href: '#faq',
-      text: 'Faq',
-      isActive: false,
-    },
-    {
-      href: '#contact',
-      text: 'Contact',
-      isActive: false,
-    },
-  ]
+  const navItemsLink = navItemsData
 
   return (
     <header className='header fixed-top'>
       <div className='container'>
         <nav className='navbar navbar-expand-lg navbar-light'>
-          <a className='navbar-brand' href='#home'>
-            <span className='logo-circle'></span>
-            Shala
-          </a>
+          <Logo />
 
           <button
             className='navbar-toggler'
