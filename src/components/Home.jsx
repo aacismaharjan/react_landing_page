@@ -1,5 +1,6 @@
 import React from 'react'
 import showCaseImg from '../img/watch-01.png'
+import Button from './Button'
 
 export default function Home() {
   return (
@@ -22,9 +23,7 @@ export default function Home() {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-              <a href='#' class='btn mybtn1'>
-                Buy For $150
-              </a>
+              <Button title='Buy for $150'></Button>
             </div>
           </div>
           <div class='col-lg-6 order-first order-lg-last'>

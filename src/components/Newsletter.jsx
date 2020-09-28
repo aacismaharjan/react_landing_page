@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 export default function Newsletter() {
   return (
@@ -22,10 +23,12 @@ export default function Newsletter() {
                   class='form-control'
                   placeholder='Enter Your Mail'
                 />
-                <button type='submit' class='btn mybtn2'>
-                  <span>Subscribe</span>
-                  <i class='far fa-paper-plane'></i>
-                </button>
+
+                <Button
+                  type='mybtn2'
+                  title='Subscribe'
+                  icon='far fa-paper-plane'
+                ></Button>
               </div>
             </form>
           </div>

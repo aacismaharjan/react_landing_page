@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 export default function Contact() {
   return (
@@ -64,9 +65,7 @@ export default function Contact() {
               <div class='row'>
                 <div class='col-md-12'>
                   <div class='form-group'>
-                    <button type='submit' class='btn mybtn2'>
-                      Send Message
-                    </button>
+                    <Button type='mybtn2' title='Send Message'></Button>
                   </div>
                 </div>
               </div>
