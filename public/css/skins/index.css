@@ -1,10 +1,5 @@
 :root {
-  --crimson: #d70d25;
-  --indigo: #6400ae;
-  --blue: #4948d4;
-  --black: #222222;
-  --aqua: #05b3b6;
-  --theme: var(--black);
+  --theme: #222222;
 }
 
 .section-title .title::before,

@@ -7,9 +7,10 @@ export default function Section({
   children,
   title,
   subtitle,
+  style,
 }) {
   return (
-    <section id={id} className={className}>
+    <section id={id} className={className} style={style}>
       <div className='container'>
         {title && subtitle && (
           <SectionTitle title={title} subtitle={subtitle} />

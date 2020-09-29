@@ -1,4 +1,4 @@
-import Testi1 from './img/testimonial/1.jpg'
+import Eljefe from './img/testimonial/eljefe.jpg'
 import Testi2 from './img/testimonial/2.jpg'
 import Testi3 from './img/testimonial/3.jpg'
 
@@ -54,10 +54,10 @@ const faqData = [
 const testiData = [
   {
     comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    avatar: Testi1,
-    name: 'Soshiv Upreti',
-    post: 'CEO Webshala',
+      'Not where I want to be right now. Apple Watch did it’s job and sent me the alert. Now I wait to see what the bloodwork, EKG, and X-rays tell us. Controlled breathing and calming thoughts. It’s going to be a long night.',
+    avatar: Eljefe,
+    name: 'EL JEFE',
+    post: 'TECH and Gadgets Reviews',
   },
   {
     comment:
@@ -80,19 +80,19 @@ const productData = [
     showcase: product1,
     newPrice: 49,
     oldPrice: 95,
-    desc: 'Simple product 001',
+    desc: 'Apple Watch Series 6',
   },
   {
     showcase: product2,
     newPrice: 49,
     oldPrice: 95,
-    desc: 'Simple product 002',
+    desc: 'SApple Watch SE',
   },
   {
     showcase: product3,
     newPrice: 49,
     oldPrice: 95,
-    desc: 'Simple product 003',
+    desc: 'Apple Watch Series 3',
   },
   {
     showcase: product4,
@@ -226,6 +226,29 @@ const navItemsData = [
   },
 ]
 
+const colorPalettes = [
+  {
+    title: 'crimson',
+    color: '#d70d25',
+  },
+  {
+    title: 'blue',
+    color: '#4948d4',
+  },
+  {
+    title: 'indigo',
+    color: '#6400ae',
+  },
+  {
+    title: 'aqua',
+    color: '#05b3b6',
+  },
+  {
+    title: 'black',
+    color: '#222222',
+  },
+]
+
 export {
   faqData,
   testiData,
@@ -234,4 +257,5 @@ export {
   socialLinksData,
   contactItemsData,
   navItemsData,
+  colorPalettes,
 }
