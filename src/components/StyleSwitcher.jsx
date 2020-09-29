@@ -5,65 +5,61 @@ const toggleSwitcher = () => {
   el.classList.toggle('open')
 }
 
-export { toggleSwitcher }
+const setActiveStyle = (e) => {
+  const color = e.target.title
+  const hexColor =
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue('--' + color) || 'crimson'
+
+  document.documentElement.style.setProperty('--theme', hexColor)
+}
 
 export default function StyleSwitcher() {
-  const setActiveStyle = (name) => {
-    let el = document.querySelectorAll('.alternate-style')
-    for (let i = 0; i < el.length; i++) {
-      el[i].setAttribute('disabled', true)
-    }
-
-    document
-      .querySelectorAll(`.alternate-style[title=${name}]`)[0]
-      .removeAttribute('disabled')
+  const ColorSwitcherIcon = ({ item: { title, color } }) => {
+    return (
+      <li
+        title={title}
+        style={{ backgroundColor: color }}
+        onClick={(e) => setActiveStyle(e)}
+        key={title}
+      ></li>
+    )
   }
+
+  const switcherIconItems = [
+    {
+      title: 'crimson',
+      color: '#d70d25',
+    },
+    {
+      title: 'blue',
+      color: '#4948d4',
+    },
+    {
+      title: 'indigo',
+      color: '#6400ae',
+    },
+    {
+      title: 'aqua',
+      color: '#05b3b6',
+    },
+    {
+      title: 'black',
+      color: '#222222',
+    },
+  ]
 
   return (
     <div className='style-switcher'>
       <h5>Style Switcher</h5>
       <ul className='list-unstyled'>
-        <li
-          title='crimson'
-          style={{ backgroundColor: '#d70d25' }}
-          onClick={() => {
-            setActiveStyle('crimson')
-            toggleSwitcher()
-          }}
-        ></li>
-        <li
-          title='blue'
-          style={{ backgroundColor: '#4948d4' }}
-          onClick={() => {
-            setActiveStyle('blue')
-            toggleSwitcher()
-          }}
-        ></li>
-        <li
-          title='indigo'
-          style={{ backgroundColor: '#6400ae' }}
-          onClick={() => {
-            setActiveStyle('indigo')
-            toggleSwitcher()
-          }}
-        ></li>
-        <li
-          title='aqua'
-          style={{ backgroundColor: '#05b3b6' }}
-          onClick={() => {
-            setActiveStyle('aqua')
-            toggleSwitcher()
-          }}
-        ></li>
-        <li
-          title='black'
-          style={{ backgroundColor: '#222222' }}
-          onClick={() => {
-            setActiveStyle('black')
-            toggleSwitcher()
-          }}
-        ></li>
+        {switcherIconItems.map((item, index) => (
+          <ColorSwitcherIcon item={item} />
+        ))}
       </ul>
     </div>
   )
 }
+
+export { toggleSwitcher }

@@ -1,3 +1,12 @@
+:root {
+  --crimson: #d70d25;
+  --indigo: #6400ae;
+  --blue: #4948d4;
+  --black: #222222;
+  --aqua: #05b3b6;
+  --theme: var(--black);
+}
+
 .section-title .title::before,
 .header::before,
 .home-section,
@@ -13,7 +22,7 @@
 .header .navbar-light .navbar-toggler-icon,
 .header .navbar-light .navbar-toggler-icon::before,
 .header .navbar-light .navbar-toggler-icon::after {
-  background-color: #05b3b6;
+  background-color: var(--theme);
 }
 
 .mybtn1,
@@ -29,20 +38,20 @@
 .contact-section .contact-item .icon i,
 .contact-section .contact-item h5,
 .footer .footer-social-links a:hover i {
-  color: #05b3b6;
+  color: var(--theme);
 }
 
 .testinomial-section .client-info img,
 .contact-section .contact-form .form-control:focus {
-  border-color: #05b3b6;
+  border-color: var(--theme);
 }
 
 .preloader .loader {
-  border-right: 5px solid #05b3b6;
+  border-right: 5px solid var(--theme);
 }
 
 @media (max-width: 991px) {
   .header .navbar #collapsibleNavbar .nav-item .nav-link {
-    color: #05b3b6;
+    color: var(--theme);
   }
 }
