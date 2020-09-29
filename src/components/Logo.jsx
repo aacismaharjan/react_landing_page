@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Logo() {
   return (
-    <a className='navbar-brand' href='/react_landing_page/'>
+    <Link className='navbar-brand' href='/'>
       <i className='fab fa-apple mr-2'></i>
       Watch
-    </a>
+    </Link>
   )
 }
