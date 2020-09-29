@@ -4,3 +4,7 @@
 @import './responsive.css';
 @import './skins/index.css';
 @import './styleSwitcher.css';
+
+img {
+  max-width: 100% !important;
+}
