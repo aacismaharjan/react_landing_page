@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.js": "/react_landing_page/static/js/main.af7ff754.chunk.js",
-    "main.js.map": "/react_landing_page/static/js/main.af7ff754.chunk.js.map",
+    "main.js": "/react_landing_page/static/js/main.a991fc30.chunk.js",
+    "main.js.map": "/react_landing_page/static/js/main.a991fc30.chunk.js.map",
     "runtime-main.js": "/react_landing_page/static/js/runtime-main.a5c839eb.js",
     "runtime-main.js.map": "/react_landing_page/static/js/runtime-main.a5c839eb.js.map",
-    "static/js/2.472fed41.chunk.js": "/react_landing_page/static/js/2.472fed41.chunk.js",
-    "static/js/2.472fed41.chunk.js.map": "/react_landing_page/static/js/2.472fed41.chunk.js.map",
+    "static/js/2.a13cae92.chunk.js": "/react_landing_page/static/js/2.a13cae92.chunk.js",
+    "static/js/2.a13cae92.chunk.js.map": "/react_landing_page/static/js/2.a13cae92.chunk.js.map",
     "index.html": "/react_landing_page/index.html",
-    "precache-manifest.8eefa6b4328373429817232ca53075d1.js": "/react_landing_page/precache-manifest.8eefa6b4328373429817232ca53075d1.js",
+    "precache-manifest.ee80fe4c786c99fd3fe56320811e4205.js": "/react_landing_page/precache-manifest.ee80fe4c786c99fd3fe56320811e4205.js",
     "service-worker.js": "/react_landing_page/service-worker.js",
-    "static/js/2.472fed41.chunk.js.LICENSE.txt": "/react_landing_page/static/js/2.472fed41.chunk.js.LICENSE.txt",
+    "static/js/2.a13cae92.chunk.js.LICENSE.txt": "/react_landing_page/static/js/2.a13cae92.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/react_landing_page/static/media/1.22915690.jpg",
     "static/media/2.jpg": "/react_landing_page/static/media/2.31387364.jpg",
     "static/media/3.jpg": "/react_landing_page/static/media/3.ec4ad7c5.jpg",
     "static/media/4.jpg": "/react_landing_page/static/media/4.a348aad4.jpg",
     "static/media/5.jpg": "/react_landing_page/static/media/5.140aab7d.jpg",
+    "static/media/eljefe.jpg": "/react_landing_page/static/media/eljefe.e7ba35fd.jpg",
     "static/media/watch-01.png": "/react_landing_page/static/media/watch-01.395a0a2a.png",
     "static/media/watch-02.jpg": "/react_landing_page/static/media/watch-02.6323c9cb.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a5c839eb.js",
-    "static/js/2.472fed41.chunk.js",
-    "static/js/main.af7ff754.chunk.js"
+    "static/js/2.a13cae92.chunk.js",
+    "static/js/main.a991fc30.chunk.js"
   ]
 }
