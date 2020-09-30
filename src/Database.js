@@ -102,7 +102,7 @@ const productData = [
   },
   {
     showcase: product5,
-    newPrice: 49,
+    newPrice: 85,
     oldPrice: 95,
     desc: 'Simple product 005',
   },
