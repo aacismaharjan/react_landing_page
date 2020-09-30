@@ -41,9 +41,9 @@ export default function Header() {
                 onClick={toggleSwitcher}
                 style={{ cursor: 'pointer' }}
               >
-                <a className='nav-link' href='#home'>
+                <button className='nav-link'>
                   <i className='fas fa-cog'></i>
-                </a>
+                </button>
               </li>
             </ul>
           </div>

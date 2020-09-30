@@ -5,6 +5,19 @@
 @import './skins/index.css';
 @import './styleSwitcher.css';
 
-img {
-  max-width: 100% !important;
+@media (max-width: 450px) {
+  .about-img img {
+    width: 100%;
+  }
+}
+
+.header #collapsibleNavbar ul li button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.header #collapsibleNavbar ul li button i {
+  font-size: 120%;
 }

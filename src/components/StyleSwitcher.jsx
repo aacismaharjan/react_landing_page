@@ -15,7 +15,10 @@ export default function StyleSwitcher() {
       <li
         title={title}
         style={{ backgroundColor: color }}
-        onClick={(e) => setActiveStyle(color)}
+        onClick={(e) => {
+          setActiveStyle(color)
+          toggleSwitcher()
+        }}
         key={title}
       />
     )
