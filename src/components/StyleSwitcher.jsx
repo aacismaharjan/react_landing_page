@@ -6,7 +6,13 @@ const toggleSwitcher = () => {
 }
 
 export default function StyleSwitcher() {
+  window.onload = function () {
+    const color = localStorage.getItem('themeColor') || '#222222'
+    setActiveStyle(color)
+  }
+
   const setActiveStyle = (color) => {
+    localStorage.setItem('themeColor', color)
     document.documentElement.style.setProperty('--theme', color)
   }
 

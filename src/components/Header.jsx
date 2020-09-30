@@ -36,14 +36,12 @@ export default function Header() {
               {navItemsLink.map((item, index) => {
                 return <NavItemLink item={item} key={index} />
               })}
-              <li
-                className='nav-item'
-                onClick={toggleSwitcher}
-                style={{ cursor: 'pointer' }}
-              >
-                <button className='nav-link'>
+
+              {/* Settings Icon */}
+              <li className='nav-item' onClick={toggleSwitcher}>
+                <a className='nav-link' href='#home'>
                   <i className='fas fa-cog'></i>
-                </button>
+                </a>
               </li>
             </ul>
           </div>
